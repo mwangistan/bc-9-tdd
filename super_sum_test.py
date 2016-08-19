@@ -7,30 +7,24 @@ class SuperSumTest(unittest.TestCase):
 	Super sum tests
 	'''
 
-	#test if non supported types i.e dictionary, string
-
 	def test_value_error(self):
+		#test if non supported types i.e dictionary, string
 		self.assertEqual(super_sum(10, 5, [6, 's']), "Type not supported")
 
-	#sum of numbers
 	def test_sum_of_integers(self):
+		#sum of numbers
 		self.assertEqual(super_sum(10, 5, 6, 9), 30)
-		
-
-
-	#Test if empty
 
 	def test_empty(self):
+		#Test if empty
 		self.assertEqual(super_sum(), 'empty')
 
-	#Test if return values are integers
-
 	def test_result_type(self):
+		#Test if return values are integers
 		self.assertIs(type(super_sum(10)), int)
 
-	#Test result when arguments have nested lists
-
 	def test_nested_list_result(self):
+		#Test result when arguments have nested lists
 		self.assertEqual(super_sum([5, 6], [4, 5], 10), 30)
 		self.assertEqual(super_sum([10, 5], 5), 20)
 
