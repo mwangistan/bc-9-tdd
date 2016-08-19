@@ -1,6 +1,5 @@
 language: python
 python:
-  - "2.7"
-  - "3.4"
+  - 2.7
 # command to run tests
-script: nosetests
+script: super_sum_test.py
